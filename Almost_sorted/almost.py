@@ -1,8 +1,17 @@
-n = int(input())
-arr = [int(x) for x in input().strip().split(' ')]
+#!/usr/bin/env python
 
-#--------------------------------------------------------------------------------
 def swap(arr):
+    '''
+    Determines if the array can be sorted by swapping any 
+    two elements in the array
+
+    INPUT:
+    arr- an array
+    
+    OUTPUT:
+    Yes, if it can be sorted by this operation along with the
+    positions of the two elements to swap, else it returns False
+    '''
     count = 0
     positions = []
     
@@ -52,6 +61,17 @@ def swap(arr):
         return False
     
 def reverseSeq(arr):
+    '''
+    Determines if an array can be sorted by reversing on sub-segment of
+    the array.
+
+    INPUT:
+    arr- an array
+
+    OUTPUT:
+    If yes, then the positions of the first and last element in the sub-segment
+
+    '''
     temparr = arr[:]
     start = None
     finish = None
@@ -82,15 +102,18 @@ def reverseSeq(arr):
     else:
         return 'no'    
 #--------------------------------------------------------------------------------
+if __name__ == '__main__':
 
-if swap(arr) != False:
-    if swap(arr) == 'yes':
-        print(swap(arr), sep='')
+    arr = [int(x) for x in input('Enter and array: ').strip().split(' ')]
+
+    if swap(arr) != False:
+        if swap(arr) == 'yes':
+            print(swap(arr), sep='')
+        else:
+            print('yes\nswap ', swap(arr)[0], ' ', swap(arr)[1], sep='')
+            
     else:
-        print('yes\nswap ', swap(arr)[0], ' ', swap(arr)[1], sep='')
-        
-else:
-    if reverseSeq(arr) == 'no':
-        print('no')
-    else:
-        print('yes\nreverse ', reverseSeq(arr)[0], ' ', reverseSeq(arr)[1], sep='')
+        if reverseSeq(arr) == 'no':
+            print('no')
+        else:
+            print('yes\nreverse ', reverseSeq(arr)[0], ' ', reverseSeq(arr)[1], sep='')

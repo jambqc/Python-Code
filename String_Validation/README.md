@@ -8,9 +8,9 @@ The user inputs a string, e.g.,
 ```
 "asDf43l"
 ```
-and this program examines whether the input string contains:
-alphanumeric, alphabetic, digits, lower case letters, and/or upper 
-case letters, respectively.
+and this program examines whether the input string displays certain
+attributes such as alphanumeric, alphabetic, digits, 
+lower case letters, and/or upper case letters.
 
 This project is useful because it provides a good example of the
 handy function called 'getattr()'. I implement this function
