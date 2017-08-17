@@ -1,2 +1,2 @@
-## This repo contains various snippets of python code.
+## This repo contains various projects and snippets of python code.
 
